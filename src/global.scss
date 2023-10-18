@@ -32,3 +32,18 @@
 
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+//header global
+.header-img {
+  margin: 0 auto;
+  width: 50%;
+  max-width: 200px;
+}
+
+//ion title
+ion-title {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
