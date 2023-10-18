@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-img class="header-img" [src]="getHeaderImg()"></ion-img>
+    <ion-img [routerLink]="['/home']" class="header-img" [src]="getHeaderImg()"></ion-img>
   </ion-toolbar>
 </ion-header>
 
@@ -22,8 +22,8 @@
           <ion-checkbox>Acepto los términos y condiciones</ion-checkbox>
         </ion-item>
         <ion-col>
-          <p>Términos y Condiciones</p>
-        <div class="pre__container">
+          <p style="margin-left: 8px;">Términos y Condiciones</p>
+          <div class="pre__container">
         <pre style="word-wrap: break-word; white-space: pre-wrap;">Términos y Condiciones de Uso del Sistema.
 
           1.	Los presentes términos y condiciones (en adelante, el “Términos y condiciones” o “Términos” o “TyC” indistintamente) constituyen un contrato entre usted (en adelante, el “Cliente”) y CUMAR S.A. (en adelante, “ULTRA” y, junto con el Cliente, las “Partes”), respecto del uso del servicio de Billetera Virtual ULTRA (en adelante, la “App”).
@@ -82,11 +82,17 @@
       <ion-button expand="full" shape="round">Crear Cuenta</ion-button>
       <ion-grid>
         <ion-col>
-          <ion-button expand="full" shape="round" fill="clear">Ya tengo cuenta</ion-button>
+          <ion-button [routerLink]="['/login-account']" expand="full" shape="round" fill="clear">Ya tengo cuenta</ion-button>
           <ion-button [routerLink]="['/home']" expand="full" shape="round" fill="clear">Inicio</ion-button>
         </ion-col>
       </ion-grid>
     </ion-grid>
   </div>
+
+  <ion-footer>
+    <ion-toolbar>
+      <p style="text-align: center; font-size: 12px;">Version de prueba</p>
+    </ion-toolbar>
+  </ion-footer>
 
 </ion-content>

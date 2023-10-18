@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-img [routerLink]="['/home']" class="header-img" [src]="getImg()"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-grid>
+      <ion-title>Iniciar Sesión</ion-title>
+      <ion-col>
+        <ion-input label="Ingresá tu usuario o email" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input label="Ingresá tu clave" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+      </ion-col>
+
+      <ion-button expand="full" shape="round">Iniciar Sesión</ion-button>
+
+      <ion-grid>
+        <ion-col>
+          <ion-button disabled="true" expand="full" shape="round" fill="clear">No sé mi clave</ion-button>
+          <ion-button [routerLink]="['/create-account']" expand="full" shape="round" fill="clear">Crear cuenta</ion-button>
+          <ion-button [routerLink]="['/home']" expand="full" shape="round" fill="clear">Inicio</ion-button>
+        </ion-col>
+      </ion-grid>
+    </ion-grid>
+  </div>
+
+  <ion-footer>
+    <ion-toolbar>
+      <p style="text-align: center; font-size: 12px;">Version de prueba</p>
+    </ion-toolbar>
+  </ion-footer>
+
+</ion-content>

@@ -33,6 +33,9 @@
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
 
 //header global
 .header-img {
@@ -45,6 +48,6 @@
 ion-title {
   font-size: 27px;
   text-align: center;
-  font-family: 'Ubuntu', sans-serif;
-  // color: #94368f;
+  margin-top: 15px;
+  color: #94368f;
 }

@@ -16,8 +16,14 @@
     <ion-item>
       <ion-title >Bienvenido</ion-title>
     </ion-item>
-    <ion-button disabled="true" expand="full" shape="round">Tengo Cuenta</ion-button>
+    <ion-button [routerLink]="['/login-account']" expand="full" shape="round">Tengo Cuenta</ion-button>
     <ion-button [routerLink]="['/create-account']" expand="full" shape="round">Crear Cuenta</ion-button>
   </ion-list>
+
+  <ion-footer>
+    <ion-toolbar>
+      <p style="text-align: center; font-size: 12px;">Version de prueba</p>
+    </ion-toolbar>
+  </ion-footer>
 
 </ion-content>
