@@ -15,6 +15,18 @@ export class LoginAccountPage implements OnInit {
     return this.dataServiceService.headerImg;
   }
 
+  toggleVisibility() {
+    this.dataServiceService.togglePasswordVisibility();
+  }
+
+  get password(): string {
+    return this.dataServiceService.password;
+  }
+
+  get showPassword(): boolean {
+    return this.dataServiceService.showPassword;
+  }
+  
   ngOnInit() {
   }
 

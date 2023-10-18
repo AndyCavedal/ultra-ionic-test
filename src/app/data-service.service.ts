@@ -4,8 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataServiceService {
-  
+
   headerImg: string = 'https://tarjetaultra.com/wp-content/uploads/2022/09/Copia-de-logo-ULTRA-1.png';
 
+  password: string = '';
+  showPassword: boolean = false;
+
   constructor() { }
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
 }

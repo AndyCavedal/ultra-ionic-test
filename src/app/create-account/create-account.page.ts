@@ -8,8 +8,8 @@ import { DataServiceService } from '../data-service.service';
 })
 export class CreateAccountPage implements OnInit {
 
-  password: string = '';
-  showPassword: boolean = false;
+  //password: string = '';
+  //showPassword: boolean = false;
 
   constructor(private dataServiceService: DataServiceService) { }
 
@@ -17,9 +17,21 @@ export class CreateAccountPage implements OnInit {
     return this.dataServiceService.headerImg;
   }
 
-  togglePasswordVisibility() {
-    this.showPassword = !this.showPassword;
+  toggleVisibility() {
+    this.dataServiceService.togglePasswordVisibility();
   }
+
+  get password(): string {
+    return this.dataServiceService.password;
+  }
+
+  get showPassword(): boolean {
+    return this.dataServiceService.showPassword;
+  }
+
+  //togglePasswordVisibility() {
+  //  this.showPassword = !this.showPassword;
+  //}
 
   ngOnInit() {
   }
