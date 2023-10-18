@@ -1,17 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-      <ion-img class="header-img" [src]="headerImg"></ion-img>
+    <ion-img class="header-img" [src]="headerImg"></ion-img>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- <div *ngFor="let img of slideImgs">
-    <img [src]="img" alt="Imagen">
-  </div> -->
-  <ion-slides [options]="slideOpts">
-    <ion-slide *ngFor="let img of slideImgs">
-      <img [src]="img" alt="Slide" style="width: 100%;">
-    </ion-slide>
-  </ion-slides>
+
+  <swiper [slidesPerView]="1">
+    <ng-template swiperSlide *ngFor="let img of slideImgs">
+      <img [src]="img" alt="imagen">
+    </ng-template>
+  </swiper>
+
+  <ion-list>
+    <ion-item>
+      <ion-title >Bienvenido</ion-title>
+    </ion-item>
+    <ion-button disabled="true" expand="full" shape="round">Tengo Cuenta</ion-button>
+    <ion-button [routerLink]="['/create-account']" expand="full" shape="round">Crear Cuenta</ion-button>
+  </ion-list>
 
 </ion-content>

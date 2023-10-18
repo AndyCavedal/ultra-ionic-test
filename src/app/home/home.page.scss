@@ -31,3 +31,31 @@
   width: 50%;
   max-width: 200px;
 }
+
+.carousel-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.cuenta-buttons__container {
+  background-color: #94368f;
+}
+
+.cuenta-buttons__container ion-button {
+  background-color: #94368f;
+}
+
+ion-button {
+  padding: 5px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+ion-title {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}

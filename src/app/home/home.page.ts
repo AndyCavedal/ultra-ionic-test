@@ -15,15 +15,6 @@ export class HomePage {
     'https://www.ultr.ar/admin/assets/img/slide3.png'
   ];
 
-  slideOpts = {
-    initialSlide: 0, // Índice de la diapositiva inicial
-    speed: 400, // Velocidad de transición en milisegundos
-    loop: true, // Bucle infinito
-    centeredSlides: true, // Centra la diapositiva activa
-    slidesPerView: 1, // Número de diapositivas visibles
-    spaceBetween: 10, // Espacio entre las diapositivas
-  };
-
   constructor() {}
 
 }
