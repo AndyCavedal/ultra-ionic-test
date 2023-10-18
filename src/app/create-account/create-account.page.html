@@ -9,14 +9,28 @@
     <ion-grid>
       <ion-title>Crear Cuenta</ion-title>
       <ion-col>
-        <ion-input label="Teléfono" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+        <ion-item>
+          <ion-label position="floating">Telefono</ion-label>
+          <ion-input placeholder="Enter text"></ion-input>
+        </ion-item>
       </ion-col>
       <ion-col>
-        <ion-input label="E-mail" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+        <ion-item>
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input placeholder="Enter text"></ion-input>
+        </ion-item>
       </ion-col>
+
       <ion-col>
-        <ion-input label="Ingresá tu clave" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+        <ion-item class="centered-icon">
+          <ion-label position="floating">Ingresá tu clave</ion-label>
+          <ion-input [type]="showPassword ? 'text' : 'password'" placeholder="Enter text"></ion-input>
+          <ion-icon *ngIf="!showPassword" name="eye-outline" slot="end" (click)="togglePasswordVisibility()"></ion-icon>
+          <ion-icon *ngIf="showPassword" name="eye-off-outline" slot="end"
+            (click)="togglePasswordVisibility()"></ion-icon>
+        </ion-item>
       </ion-col>
+
       <ion-col>
         <ion-item>
           <ion-checkbox>Acepto los términos y condiciones</ion-checkbox>
@@ -24,7 +38,7 @@
         <ion-col>
           <p style="margin-left: 8px;">Términos y Condiciones</p>
           <div class="pre__container">
-        <pre style="word-wrap: break-word; white-space: pre-wrap;">Términos y Condiciones de Uso del Sistema.
+            <pre style="word-wrap: break-word; white-space: pre-wrap;">Términos y Condiciones de Uso del Sistema.
 
           1.	Los presentes términos y condiciones (en adelante, el “Términos y condiciones” o “Términos” o “TyC” indistintamente) constituyen un contrato entre usted (en adelante, el “Cliente”) y CUMAR S.A. (en adelante, “ULTRA” y, junto con el Cliente, las “Partes”), respecto del uso del servicio de Billetera Virtual ULTRA (en adelante, la “App”).
           El Cliente se compromete a leer, comprender y aceptar todas las condiciones establecidas en este Acuerdo, al momento de solicitud de su registro. En caso de no encontrarse de acuerdo con los Términos y Condiciones, por favor, absténgase de utilizar la Billetera. Los presentes Términos y Condiciones se considerarán aceptados desde el momento en el que el registro sea aprobado por ULTRA.
@@ -76,23 +90,24 @@
 
           4.	APERTURA DE CUENTA ULTRA Y VINCULACIÓN AL TIPO DE CUENTA.
           El Cliente deberá para adherirse al Sistema ULTRA…</pre>
-        </div>
-      </ion-col>
+          </div>
+        </ion-col>
       </ion-col>
       <ion-button expand="full" shape="round">Crear Cuenta</ion-button>
       <ion-grid>
         <ion-col>
-          <ion-button [routerLink]="['/login-account']" expand="full" shape="round" fill="clear">Ya tengo cuenta</ion-button>
+          <ion-button [routerLink]="['/login-account']" expand="full" shape="round" fill="clear">Ya tengo
+            cuenta</ion-button>
           <ion-button [routerLink]="['/home']" expand="full" shape="round" fill="clear">Inicio</ion-button>
         </ion-col>
       </ion-grid>
     </ion-grid>
   </div>
 
-  <ion-footer>
+  <!-- <ion-footer>
     <ion-toolbar>
       <p style="text-align: center; font-size: 12px;">Version de prueba</p>
     </ion-toolbar>
-  </ion-footer>
+  </ion-footer> -->
 
 </ion-content>
