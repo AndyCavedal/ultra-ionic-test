@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'login-account',
     loadChildren: () => import('./login-account/login-account.module').then( m => m.LoginAccountPageModule)
+  },
+  {
+    path: 'recover-password',
+    loadChildren: () => import('./recover-password/recover-password.module').then( m => m.RecoverPasswordPageModule)
   }
 ];
 
