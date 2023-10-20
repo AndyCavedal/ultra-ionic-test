@@ -7,18 +7,25 @@
 <ion-content [fullscreen]="true">
   <div>
     <ion-grid>
-      <ion-title>Iniciar Sesión</ion-title>
+      <ion-title>Iniciar sesión</ion-title>
       <ion-col>
         <ion-item>
           <ion-label position="floating">Ingresá tu usuario o e-mail</ion-label>
-          <ion-input placeholder="Enter text"></ion-input>
+          <ion-input placeholder="Usuario o mail válidos"></ion-input>
         </ion-item>
       </ion-col>
 
       <ion-col>
         <ion-item class="centered-icon">
           <ion-label position="floating">Ingresá tu clave</ion-label>
-          <ion-input [type]="showPassword ? 'text' : 'password'" placeholder="Enter text"></ion-input>
+          <ion-input
+          [type]="showPassword ? 'text' : 'password'"
+          placeholder="Mín 6 caracteres, contener letras y números"
+          ngModel
+          errorText="clave invalida"
+          pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$"
+          required
+          ></ion-input>
           <ion-icon *ngIf="!showPassword" name="eye-outline" slot="end" (click)="toggleVisibility()"></ion-icon>
           <ion-icon *ngIf="showPassword" name="eye-off-outline" slot="end" (click)="toggleVisibility()"></ion-icon>
         </ion-item>

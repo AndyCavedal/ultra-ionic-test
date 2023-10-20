@@ -8,8 +8,6 @@ import { DataServiceService } from '../data-service.service';
 })
 export class CreateAccountPage implements OnInit {
 
-  //password: string = '';
-  //showPassword: boolean = false;
 
   constructor(private dataServiceService: DataServiceService) { }
 
